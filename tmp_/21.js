@@ -1,0 +1,1 @@
+obfuscate 20.js
