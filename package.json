@@ -1,0 +1,28 @@
+{
+  "name": "i-run-code-from-the-internet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "PRECIOUS_SECRET='-=SeCrEt=-' node app.js",
+    "test": "PRECIOUS_SECRET='-=SeCrEt=-' lavamoat app.js",
+    "lavamoat:policy": "lavamoat --autopolicy app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naugtur/i-run-code-from-the-internet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naugtur/i-run-code-from-the-internet/issues"
+  },
+  "homepage": "https://github.com/naugtur/i-run-code-from-the-internet#readme",
+  "dependencies": {
+    "@_evil/package": "*"
+  },
+  "devDependencies": {
+    "lavamoat": "^6.4.0"
+  }
+}
