@@ -1,0 +1,9 @@
+#!/bin/bash
+
+IDNOW=`git rev-list -n1 HEAD`
+IDSHOW=`git rev-list --all --parents | grep " ${IDNOW}" | cut -d" " -f1`
+
+git checkout -f $IDSHOW
+git reset --hard $IDNOW
+git reset --soft $IDSHOW
+git reset HEAD

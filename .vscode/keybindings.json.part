@@ -1,0 +1,14 @@
+    {
+        "key": "ctrl+shift+]",
+        "command": "workbench.action.tasks.runTask",
+        "args": "gitnext"
+    },
+    {
+        "key": "ctrl+shift+[",
+        "command": "workbench.action.tasks.runTask",
+        "args": "gitback"
+    },
+    {
+        "key": "ctrl+shift+'",
+        "command": "workbench.action.files.revert"
+    }
