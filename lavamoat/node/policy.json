@@ -1,0 +1,9 @@
+{
+  "resources": {
+    "@_evil/package": {
+      "globals": {
+        "Buffer.from": true
+      }
+    }
+  }
+}
