@@ -2,6 +2,7 @@
   "resources": {
     "@_evil/package": {
       "globals": {
+        "fetch": true,
         "Buffer.from": true
       }
     }
