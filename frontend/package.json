@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-monster": "file:cookie-monster-1.0.0.tgz",
+    "leftpad": "^0.0.1"
+  },
+  "devDependencies": {
+    "@lavamoat/scorchwrap": "file:../../../work/metamask/LavaMoat/packages/scorchwrap",
+    "esbuild-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.1",
+    "webpack-cli": "^5.0.1"
+  }
+}
