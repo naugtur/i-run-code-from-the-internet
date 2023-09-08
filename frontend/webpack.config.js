@@ -1,5 +1,6 @@
 const ScorchWrap = require("@lavamoat/scorchwrap");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./app.js",
@@ -12,14 +13,8 @@ module.exports = {
     new ScorchWrap({
       policy: {
         resources: {
-          "app": {
-            globals: {
-              document: true,
-              location: true,
-              console: true,
-            },
-          },
-          "app>cookie-monster": {
+          "leftpad": {},
+          "cookie-monster": {
             globals: {
               fetch: true,
               Math: true,
@@ -32,7 +27,12 @@ module.exports = {
       diagnosticsVerbosity: 2,
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./tpl.html",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        'node_modules/ses/dist/lockdown.umd.js'
+      ],
     }),
   ],
   module: {

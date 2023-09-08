@@ -1,1 +1,1 @@
-export const what:string = "OMG, hilarious!";
+export const reaction:string = "OMG, hilarious!";

@@ -3,20 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "private": true,
   "scripts": {
     "test": "webpack"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "naugtur",
+  "license": "MIT",
   "dependencies": {
-    "cookie-monster": "file:cookie-monster-1.0.0.tgz",
-    "leftpad": "^0.0.1"
+    "cookie-monster": "file:.fake-npm/cookie-monster-1.0.0.tgz",
+    "leftpad": "0.0.1",
+    "ses": "0.18.7"
   },
   "devDependencies": {
-    "@lavamoat/scorchwrap": "file:../../../work/metamask/LavaMoat/packages/scorchwrap",
-    "esbuild-loader": "^3.0.1",
-    "html-webpack-plugin": "^5.5.1",
-    "webpack-cli": "^5.0.1"
+    "@lavamoat/aa": "3.1.2",
+    "@lavamoat/scorchwrap": "file:.fake-npm/lavamoat-scorchwrap-0.0.1-0.tgz",
+    "copy-webpack-plugin": "11.0.0",
+    "esbuild-loader": "3.0.1",
+    "html-webpack-plugin": "5.5.1",
+    "lavamoat-core": "file:.fake-npm/lavamoat-core-main-20230908.tgz",
+    "webpack-cli": "5.0.1"
   }
 }
