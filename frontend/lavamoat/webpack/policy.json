@@ -1,0 +1,11 @@
+{
+  "resources": {
+    "cookie-monster": {
+      "globals": {
+        "document.cookie": true,
+        "fetch": true,
+        "location.host": true
+      }
+    }
+  }
+}

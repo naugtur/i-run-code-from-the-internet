@@ -1,40 +1,15 @@
-const ScorchWrap = require("@lavamoat/scorchwrap");
+const LavaMoatPlugin = require("@lavamoat/webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require('path');
 
-module.exports = {
+const config = {
   entry: "./app.js",
   mode: "development",
   output: {
-    filename: "app.bundle.js",
+    path: path.resolve(__dirname, "dist_none"),
   },
   devtool: "source-map",
-  plugins: [
-    new ScorchWrap({
-      policy: {
-        resources: {
-          "leftpad": {},
-          "cookie-monster": {
-            globals: {
-              fetch: true,
-              Math: true,
-              encodeURI: true,
-            },
-          },
-        },
-      },
-      runChecks: true,
-      diagnosticsVerbosity: 2,
-    }),
-    new HtmlWebpackPlugin({
-      template: "./tpl.html",
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        'node_modules/ses/dist/lockdown.umd.js'
-      ],
-    }),
-  ],
+  plugins: [new HtmlWebpackPlugin({})],
   module: {
     rules: [
       {
@@ -52,3 +27,21 @@ module.exports = {
     ],
   },
 };
+
+const configLM = {
+  ...config,
+  output: {
+    path: path.resolve(__dirname, "dist_lava"),
+  },
+  plugins: [
+    new LavaMoatPlugin({
+      generatePolicy: true,
+      runChecks: true,
+      HtmlWebpackPluginInterop: true,
+      emitPolicySnapshot: true,
+    }),
+    new HtmlWebpackPlugin({}),
+  ],
+};
+
+module.exports = [config, configLM];

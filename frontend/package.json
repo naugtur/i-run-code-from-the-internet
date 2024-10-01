@@ -10,17 +10,15 @@
   "author": "naugtur",
   "license": "MIT",
   "dependencies": {
+    "@lavamoat/webpack": "^0.6.0-beta.0",
     "cookie-monster": "file:.fake-npm/cookie-monster-1.0.0.tgz",
-    "leftpad": "0.0.1",
-    "ses": "0.18.7"
+    "leftpad": "0.0.1"
   },
   "devDependencies": {
     "@lavamoat/aa": "3.1.2",
-    "@lavamoat/scorchwrap": "file:.fake-npm/lavamoat-scorchwrap-0.0.1-0.tgz",
     "copy-webpack-plugin": "11.0.0",
     "esbuild-loader": "3.0.1",
     "html-webpack-plugin": "5.5.1",
-    "lavamoat-core": "file:.fake-npm/lavamoat-core-main-20230908.tgz",
     "webpack-cli": "5.0.1"
   }
 }
