@@ -5,17 +5,17 @@
   "main": "app.js",
   "private": true,
   "scripts": {
+    "start": "webpack",
     "test": "webpack"
   },
   "author": "naugtur",
   "license": "MIT",
   "dependencies": {
-    "@lavamoat/webpack": "^0.6.0-beta.0",
     "cookie-monster": "file:.fake-npm/cookie-monster-1.0.0.tgz",
     "leftpad": "0.0.1"
   },
   "devDependencies": {
-    "@lavamoat/aa": "3.1.2",
+    "@lavamoat/webpack": "^0.6.0-beta.0",
     "copy-webpack-plugin": "11.0.0",
     "esbuild-loader": "3.0.1",
     "html-webpack-plugin": "5.5.1",
