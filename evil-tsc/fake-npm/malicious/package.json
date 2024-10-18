@@ -1,0 +1,14 @@
+{
+  "name": "@naugtur/malicious",
+  "version": "0.0.5",
+  "description": "",
+  "scripts": {
+    "postinstall": "node ./evilPlots.js"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
