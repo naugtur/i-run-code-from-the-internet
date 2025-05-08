@@ -39,6 +39,10 @@ const configLM = {
       runChecks: true,
       HtmlWebpackPluginInterop: true,
       emitPolicySnapshot: true,
+      scuttleGlobalThis: {
+        enabled: true,
+        exceptions: ["Reflect","Symbol","Object","Array","Set","String","Number","Boolean","Map","WeakMap","WeakSet","BigInt","Date","Function","RegExp","Error","Promise","MapIterator","SetIterator"],
+      }
     }),
     new HtmlWebpackPlugin({}),
   ],
